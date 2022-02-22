@@ -62,7 +62,7 @@ def form():
         return send_file(form_url)
 
 
-@app.route("/year/<year>", methods=['GET'])
+@app.route("/<year>", methods=['GET'])
 def add_year(year):
     json_url = os.path.join(app.static_folder, "", "nobel.json")
     data_json = json.load(open(json_url))
